@@ -122,7 +122,7 @@ str.join(" ")
 
 
 function isMailValid (mail) {
-    if(mail.includes("@")) {
+    if(mail.includes("@", 0 )) {    //( string to contain, starting position/index)
         return true
     }else {
         return false
