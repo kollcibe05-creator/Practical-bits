@@ -115,3 +115,7 @@ function divideNumbers(num1, num2) {
 
 }
 divideNumbers(50, 8)
+
+
+let str = "Collins"
+str.join(" ")
