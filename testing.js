@@ -948,5 +948,143 @@ function capitalizeEachWord(sentence) {
 console.log(capitalizeEachWord("i am a boy in a certain town of Manhattan"));
 
 */
+/*
+let books = [
+  "Eloquent Javascript",
+  "JavaScript: The Good Parts",
+  "Learn JavaScript VISUALLY",
+  "You don\'t know JavaScript",
+  "JavaScript: The Definitive Gouide",
+];
+
+const obj = {
+  title: "Rick and Morty",
+  Author: "Steve Cannon",
+  Publisher: "Fox Entertainment",
+};
+*/
+/*
+function loopThroughBooks(books) {
+  for (let i = 0; i < books.length; i++) {
+    console.log(books[i]);
+  }
+}
+console.log(loopThroughBooks(books));
+*/
+
+/*
+function loopThroughBooks(books) {
+  for (const book of books) {
+    console.log(book);
+  }
+}
+
+console.log(loopThroughBooks(books));
+
+function loopThroughObjects(obj) {
+  for (const key in obj) {
+    console.log(key);
+    console.log(obj[key]);
+  }
+}
+
+console.log(loopThroughObjects(obj));
+*/
+/*
+function greet(name) {
+  return `Ssup ${name}`;
+}
+
+function insult(name) {
+  return `Don\'t look at me ${name} '`;
+}
+
+function firstClass(foo, anotherFoo) {
+  let name = "Bitch";
+  let fun1 = foo(name);
+  let foo2 = anotherFoo(name);
+
+  return [fun1, foo2];
+}
+
+console.log(firstClass(greet, insult));
+
+*/
+
+const books = [
+  {
+    title: "The Simpsons",
+    price: 500,
+    inventory: 2,
+  },
+  {
+    title: "Rick and Morty",
+    price: 1500,
+    inventory: 0,
+  },
+  {
+    title: "One Of Us Is Lying",
+    price: 6500,
+    inventory: 15,
+  },
+  {
+    title: "Dark",
+    price: 650,
+    inventory: 5,
+  },
+  {
+    title: "Elixir",
+    price: 4500,
+    inventory: 6,
+  },
+  {
+    title: "Chucky",
+    price: 2500,
+    inventory: 60,
+  },
+  {
+    title: "Sandman",
+    price: 1250,
+    inventory: 24,
+  },
+  {
+    title: "Money Heist",
+    price: 5550,
+    inventory: 3,
+  },
+];
+
+function getTitles(books) {
+  return books.map((book) => book.title);
+}
+
+function totalInventoryLoop(books) {
+  let total = 0;
+  for (const book of books) {
+    total += book.inventory;
+  }
+
+  return `Total books: ${total} inventory items`;
+}
+
+function totalInventory(array) {
+  const totalBooks = array.reduce((total, item) => total + item.inventory, 0);
+  return `Total books: ${totalBooks} inventory items`;
+}
+
+function replenish(books) {
+  let bookToBeAdded = [];
+  for (book of books) {
+    if (book.inventory <= 5) bookToBeAdded.push(book.title);
+  }
+  return bookToBeAdded.join(" ,  ");
+}
+
+function printReport(foo, books) {
+  return foo(books);
+}
+
+console.log(printReport(replenish, books));
+
 
 
