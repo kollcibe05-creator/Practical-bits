@@ -119,3 +119,12 @@ divideNumbers(50, 8)
 
 let str = "Collins"
 str.join(" ")
+
+
+function isMailValid (mail) {
+    if(mail.includes("@")) {
+        return true
+    }else {
+        return false
+    }
+}
