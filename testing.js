@@ -862,4 +862,91 @@ function isPalindrome(word) {
 console.log(isPalindrome("word"));
 */
 
+function isString(input) {
+  switch (typeof input === "string") {
+    case true:
+      return "Hell yeah! Brainy man, Keep thinking like that";
+    case false:
+      return "Reason 'Jackass!'";
+  }
+}
+// console.log(isString(14));
+
+const POJO = Object.create(null);
+
+// console.log(POJO);
+
+//No need for curly braces if it is a single statement// expression
+function testFoo(name) {
+  if (name === "winner") return "Yeah! That's me";
+  else return "Not me!";
+}
+
+// console.log(testFoo("loser"));
+
+const numbers = [5, 8, 7, 9, 2, 6, 1];
+
+// console.log(numbers.sort());
+
+function sumTwoSmallestNumbers(numbers) {
+  // Code here
+  const filteredNumbers = numbers.filter(
+    (number) => Number.isInteger(number) && number > 0,
+  );
+  const sortedNumbers = filteredNumbers.sort((a, b) => a - b);
+
+  return sortedNumbers[0] + sortedNumbers[1];
+}
+
+// console.log(sumTwoSmallestNumbers([5, 4, 8, 0.1, 60, 14, 2]));
+
+function isSmallest(numbers) {
+  let copyOfNumbers = [...numbers];
+  const min = Math.min(...copyOfNumbers);
+  const pos = copyOfNumbers.indexOf(min);
+
+  return copyOfNumbers.slice(0, pos).concat(copyOfNumbers.splice(pos + 1));
+
+  // return copyOfNumbers.filter((number) => number !== min);
+}
+
+// console.log(isSmallest([5, 4, 8, 0.1, 60, 14, 2]));
+
+//converting to string
+
+const name = ["collins", "Kibet", "Ngetich"];
+
+console.log(name.toString(" "));
+
+// converting to array
+
+const string = "Collins Kibet Ngetich";
+
+console.log(string.split(" "));
+
+console.log(name.join(" "));
+
+// const arrayStr = [...string];
+// console.log(arrayStr);
+// let foo = name.toCharArray();
+// console.log(foo);
+
+/*
+
+function capitalizeAWord(word) {
+  return word.charAt(0).toUpperCase().concat(word.slice(1));
+}
+console.log(capitalizeAWord("collins"));
+
+function capitalizeEachWord(sentence) {
+  const splitWords = sentence.split(" ");
+  const capitalizedWords = splitWords.map((word) => capitalizeAWord(word));
+
+  return capitalizedWords.join(" ");
+}
+
+console.log(capitalizeEachWord("i am a boy in a certain town of Manhattan"));
+
+*/
+
 
