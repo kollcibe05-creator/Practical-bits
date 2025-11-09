@@ -1085,6 +1085,11 @@ function printReport(foo, books) {
 }
 
 console.log(printReport(replenish, books));
+console.log(replenishAgain, books)
+
+function replenishAgain () {
+  return books.filter(book => book,inventory < 5)
+}
 
 
 
