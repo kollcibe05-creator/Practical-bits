@@ -1092,4 +1092,66 @@ function replenishAgain () {
 }
 
 
+function dynamicLoop(books, updaterFoo) {
+  const updatedArray = [];
+  for (let book of books) {
+    updatedArray.push(updaterFoo(book));
+  }
+  return updatedArray;
+}
+
+// function dynamicHandler(foo, updater, books) {
+//   foo(updater, books);
+// }
+
+// console.log(dynamicHandler(dynamicLoop, title, books));
+
+function prices(book) {
+  return book.title;
+}
+
+function halfDiscount(item) {
+  let itemCopy = Object.assign({}, item);
+  itemCopy.price = Math.floor(itemCopy.price / 2);
+  return itemCopy;
+}
+
+// console.log(dynamicLoop(books, halfDiscount));
+
+// console.log(Object.assign({}, books));
+
+const array = [1, 2, 3, 4, 5, 4, 8];
+
+// console.log(Object.assign({}, array));
+
+//arrays  methods eg. map() are high-order fns meaning they can invoke other functions
+const dynamicMap = books.map(halfDiscount);
+
+// console.log(dynamicMap);
+
+const email = "collinsKibet3@gmail.com";
+
+function isValidMail(email) {
+  if (email.includes("@", 3)) return true;
+  else return false;
+}
+
+// console.log(isValidMail(email));
+
+function finder(str, array) {
+  let result = [];
+  for (item of array) {
+    if (item.title.includes(str, 0)) {
+      result.push(item);
+    } // else {
+    //   console.log("The book you are looking for is non-existent");
+    // }
+  }
+  return result;
+}
+
+console.log(finder("o", books));
+
+
+
 
