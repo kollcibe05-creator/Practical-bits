@@ -1154,4 +1154,63 @@ console.log(finder("o", books));
 
 
 
+function advancedFinder(inventory, finder) {
+  let result = null;
+  for (let item of inventory) {
+    if (finder(item) === true) {
+      result = item;
+      break;
+    }
+  }
+  return result;
+}
+
+function getBook(book) {
+  return book.title === "Elixir";
+}
+function restockUrgent(book) {
+  return book.inventory <= 1;
+}
+
+function getBookAdvanced(book) {
+  return book.title.includes("O" || "o");
+}
+// console.log(advancedFinder(books, restockUrgent));
+
+//array method find is more efficient//
+const foundItem = books.find(getBookAdvanced);
+// console.log(foundItem);
+
+const reducer = (accumulator, item) => {
+  const total = item.inventory * item.price;
+  return (accumulator += total);
+};
+
+const reduce = books.reduce(reducer, 0);
+
+// console.log(reduce);
+
+//substring and string concatenation
+const titleConcat = (accumulator, item) => accumulator + ", " + item.title;
+const titleReduce = books.reduce(titleConcat, "").substring(2);
+
+// console.log(titleReduce);
+
+const str = "I am a beautiful string, why do you wan't to delete me!";
+console.log(str.substring(0, 6)); //0 included, 6 excluded
+
+/*
+const details = {
+  name: "Collins",
+  age: "25",
+  career: "Entrepreneur, CEO, Software Engineer",
+};
+
+const testingForEach = details.forEach((detail) => detail);
+console.log(testingForEach);
+*/
+
+
+
+
 
