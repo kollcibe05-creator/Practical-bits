@@ -1210,6 +1210,123 @@ const testingForEach = details.forEach((detail) => detail);
 console.log(testingForEach);
 */
 
+const books = [
+  {
+    title: "The Simpsons",
+    price: 500,
+    inventory: 2,
+  },
+  {
+    title: "Rick and Morty",
+    price: 1500,
+    inventory: 0,
+  },
+  {
+    title: "One Of Us Is Lying",
+    price: 6500,
+    inventory: 15,
+  },
+  {
+    title: "Dark",
+    price: 650,
+    inventory: 5,
+  },
+  {
+    title: "Elixir",
+    price: 4500,
+    inventory: 6,
+  },
+  {
+    title: "Chucky",
+    price: 2500,
+    inventory: 60,
+  },
+  {
+    title: "Sandman",
+    price: 1250,
+    inventory: 24,
+  },
+  {
+    title: "Money Heist",
+    price: 5550,
+    inventory: 3,
+  },
+];
+const xbooks = [
+  {
+    title: "The Simpsons",
+    price: 500,
+    inventory: 2,
+  },
+  {
+    title: "Rick and Morty",
+    price: 1500,
+    inventory: 0,
+  },
+  {
+    title: "One Of Us Is Lying",
+    price: 6500,
+    inventory: 15,
+  },
+  {
+    title: "Dark",
+    price: 650,
+    inventory: 5,
+  },
+  {
+    title: "Elixir",
+    price: 4500,
+    inventory: 6,
+  },
+  {
+    title: "Chucky",
+    price: 2500,
+    inventory: 60,
+  },
+  {
+    title: "Sandman",
+    price: 1250,
+    inventory: 24,
+  },
+  {
+    title: "Money Heist",
+    price: 5550,
+    inventory: 3,
+  },
+];
+// const [item] = xbooks;
+const oneBook = {
+  Movie: "Money Heist",
+  price: 5550,
+  inventory: 3,
+};
+
+const array = [1, 2, 3, 4];
+// const [one, two, three, four] = array;
+
+const addedArray = [...array, 5];
+const oneBook2 = {
+  ...oneBook,
+  sales: 55,
+  Movie: "Bodies",
+  similar: "The Cabin In the Woods",
+};
+
+let { Movie, price, inventory, sales, similar } = oneBook2;
+console.log(
+  "Movie: ",
+  Movie,
+  "Price: ",
+  price,
+  "Inventory: ",
+  inventory,
+  "Sales: ",
+  sales,
+  "Similar: ",
+  similar,
+);
+
+
 
 
 
