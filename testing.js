@@ -1378,6 +1378,7 @@ console.log(Palindrome("mom"));
 // console.log(testT("racecar"));
 
 
+<<<<<<< HEAD
 /*
 
 //EFFECTIVELY EXECUTES but according to the Big O notation it isn't//
@@ -1441,6 +1442,8 @@ for (const num of array) {
 }
 }
 
+=======
+>>>>>>> parent of c466d70 (Two_sum problem)
 
 
 
