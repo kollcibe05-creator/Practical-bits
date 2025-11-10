@@ -1210,7 +1210,7 @@ const testingForEach = details.forEach((detail) => detail);
 console.log(testingForEach);
 */
 
-const books = [
+const booksToo = [
   {
     title: "The Simpsons",
     price: 500,
@@ -1300,6 +1300,7 @@ const oneBook = {
   price: 5550,
   inventory: 3,
 };
+/*
 
 const array = [1, 2, 3, 4];
 // const [one, two, three, four] = array;
@@ -1342,6 +1343,39 @@ console.log(strToArray.toString("")); //in-efficient
 console.log(strToArray.join("")); //efficient
 
 console.log(str.split("").reverse().join(""));
+*/
+
+function isPalindrome(word) {
+  for (let i = 0; i <= word.length; i++) {
+    const start = word[i];
+    j = word.length - i - 1;
+    const end = word[j];
+
+    if (start !== end) return false;
+    else return true;
+  }
+}
+
+// console.log(isPalindrome("mom"));
+
+function Palindrome(word) {
+  for (let i = 0; i < word.length / 2; i++) {
+    let starChar = word[i];
+    let j = word.length - i - 1;
+    let endChar = word[j];
+    if (starChar === endChar) return true;
+    else return false;
+  }
+}
+
+console.log(Palindrome("mom"));
+
+// function testT(word) {
+//   for (let x = 0; x < word.length / 2; x++) {
+//     console.log(word[x]);
+//   }
+// }
+// console.log(testT("racecar"));
 
 
 
