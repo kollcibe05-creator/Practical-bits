@@ -1378,6 +1378,69 @@ console.log(Palindrome("mom"));
 // console.log(testT("racecar"));
 
 
+/*
+
+//EFFECTIVELY EXECUTES but according to the Big O notation it isn't//
+
+function hasComplement(array, number) {
+  for (let i = 0; i < array.length; i++) {
+    const complement = number - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (complement === array[j]) return true;
+    }
+  }
+  return false;
+}
+
+const numbers = [1, 2, 3, 7, 1, 4];
+console.log(hasComplement(numbers, 10));
+*/
+
+
+
+
+//TWO_SUM PROBLEM
+
+
+function isTargetSum(array, number) {
+  //create an object that holds the seen value
+  const seenNumbers = {}
+
+  //iterate through the numbers and get their complement
+  for(let i = 0; i<array.length; i++) {
+
+    //for each number you iterate through, get its complement
+    const complement = number - array[i]
+
+    //Check if any key in our seenNumbers matches the compelement
+    if (seenNumbers[complement]) return true
+    
+    //otherwise add it to the Obj
+    seenNumbers[array[1]] = true;
+  }
+  return false;
+
+}
+
+
+//improved runtime complexity
+
+function refactorisTargetSum (array, number) {
+  const seenObj = {}
+//use for of loop instead 
+for (const num of array) {
+
+  const complement = number - num
+
+  // cCOULD  WORK if we were not adding to the obj: if (seenObj[complement]) return true
+ // return complement in seenObj;
+ if (complement in seenObj)
+
+  seenObj[num] = true;
+
+}
+}
+
 
 
 
