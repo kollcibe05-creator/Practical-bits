@@ -1328,6 +1328,24 @@ console.log(
 
 
 
+setTimeout(() => console.log("Like I said,,,,It's gonna take a while"), 5000);
+
+const str = "car";
+const arr = [1, 2, 3];
+// console.log(arr.reverse());
+// const splitArr = (...arr)
+const strToArray = str.split("");
+
+console.log(strToArray);
+
+console.log(strToArray.toString("")); //in-efficient
+console.log(strToArray.join("")); //efficient
+
+console.log(str.split("").reverse().join(""));
+
+
+
+
 
 
 
