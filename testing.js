@@ -1432,7 +1432,7 @@ for (const num of array) {
 
   const complement = number - num
 
-  // cCOULD  WORK if we were not adding to the obj: if (seenObj[complement]) return true
+  // COULD  WORK if we were not adding to the obj: if (seenObj[complement]) return true
  // return complement in seenObj;
  if (complement in seenObj)
 
