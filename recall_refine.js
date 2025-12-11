@@ -9,3 +9,5 @@ console.log(greeting())
 console.log(typeof("string"))
 
 console.log("85".toString())     //changing to a string 
+
+console.assert(typeof("Whoa" === "string"))
