@@ -1,32 +1,6 @@
-dict_ = { 
- english: "Welcome",
- czech: "Vitejte",
- danish: "Velkomst",
- dutch: "Welkom",
- estonian: "Tere tulemast",
- finnish: "Tervetuloa",
- flemish: "Welgekomen",
- french: "Bienvenue",
- german: "Willkommen",
- irish: "Failte",
- italian: "Benvenuto",
- latvian: "Gaidits",
- lithuanian: "Laukiamas",
- polish: "Witamy",
- spanish: "Bienvenido",
- swedish: "Valkommen",
- welsh: "Croeso",
-}
+arr = [1,2,3,4,5,6,7]
 
-function greet(lang){
-   
-    for(let language in dict_){
-        if (language == lang){
-            greeting = dict_[language]
-            return greeting
-        }
-    }
-    return "Welcome"
-}
-
-console.log(greet("swedish"))
+// console.log(arr.fill(2))
+// console.log(arr)
+// arr.fill(2, 4)
+// console.log(arr)
