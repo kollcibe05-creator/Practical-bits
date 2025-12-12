@@ -22,3 +22,9 @@ print(arr.count("2"))
 
 print(format(123.4567, ".2f"))
 print(globals())
+
+
+
+
+###max number
+print(max(a + b + abs(a-b))/2)
