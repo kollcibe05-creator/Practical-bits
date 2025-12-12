@@ -1,3 +1,6 @@
+import random
+from datetime import datetime 
+
 dict_ = { 
  "english": "Welcome",
  "czech": "Vitejte",
@@ -17,20 +20,23 @@ dict_ = {
  "swedish": "Valkommen",
  "welsh": "Croeso",
 }
-# def greet(language):
-#         for greeting in languages:
-#             # print(greeting)
-#             # print(greeting[0])
-#             if greeting[0] == language:
-#                 salutation = greeting[1]
-#                 return (salutation)
-#         return "Welcome"        
 
-def greet(language):
-    if language in dict_.keys():
-        return dict_[language]
-    else:
-        return "Welcome"     
+# print(dict_.keys())
+# print(dict_.values())
+# print(float(200))
+# print([value for key, value in dict_.items() if key == "french"])
+# print(4**2)
+# name = "Collins"
+# if name == "Collins":
+#     greeting = "Hi"
+# else:
+#     greeting = "Yo" 
 
-# print(greet("french"))
+# print(greeting)
+# print('find'*4)
+# print(random.randint(1, 100))
+print(datetime(2005, 12,12))
+print(datetime.today())
+# print(date(datetime.today()))
+
 
