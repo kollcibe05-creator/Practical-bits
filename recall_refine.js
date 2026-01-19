@@ -35,3 +35,26 @@ console.log(capitalizedWords)
 let CapitalizedSentence =  capitalizedWords.join(" ")
 
 console.log(CapitalizedSentence)
+
+
+// shortened = "many men many many many men wish death \'pon me and I don\'t try no more.".split(" ").charAt(0).toUpperCase()+word.slice(1).toLowerCase().join(" ")
+
+// console.log(shortened)
+
+console.log()
+
+const dict = {
+   name: "Collins",
+   location: "Kinoo",
+   sex: "Male",
+   course: "Software engineering",
+   Nationality: "Kenyan",
+   Status: "All good!",
+}
+
+
+for (let value of Object.values(dict)){
+   console.log(value)
+}
+
+
