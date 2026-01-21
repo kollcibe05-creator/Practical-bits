@@ -37,3 +37,16 @@
 // console.log(isPalindrome("racecar"))
 
 
+function fibonacci () {
+    list = [2,3]
+    while (list.length<25){
+
+        list.push(list[list.length-1] + list[list.length-2])
+    }
+    return list
+}
+console.log(fibonacci())
+
+// numbers = [1,2, 3, 4]
+
+// console.log(numbers[numbers.length-1])
