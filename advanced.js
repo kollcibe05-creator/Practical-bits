@@ -37,16 +37,29 @@
 // console.log(isPalindrome("racecar"))
 
 
-function fibonacci () {
-    list = [2,3]
-    while (list.length<25){
+// function fibonacci () {
+//     list = [2,3]
+//     while (list.length<25){
 
-        list.push(list[list.length-1] + list[list.length-2])
+//         list.push(list[list.length-1] + list[list.length-2])
+//     }
+//     return list
+// }
+// console.log(fibonacci())
+
+// // numbers = [1,2, 3, 4]
+
+// // console.log(numbers[numbers.length-1])
+
+function twoSum (list, target) {
+
+    for (let i = 0; i<list.length; i++){
+        complement = target - list[i]
+        if (list.includes(complement)){
+            return [i, list.indexOf(complement)]
+        }
     }
-    return list
 }
-console.log(fibonacci())
+console.log(twoSum([1,4,6,9], 7))
 
-// numbers = [1,2, 3, 4]
-
-// console.log(numbers[numbers.length-1])
+// console.log([1, 3, 5].includes(2))
