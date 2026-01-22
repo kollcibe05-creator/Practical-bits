@@ -67,13 +67,35 @@
 
 
 
-def reverse_string (string):
-    stack = []
-    for char in string:
-        stack.append(char)
-    reversed = ""
-    while stack:
-        reversed += stack.pop()
-    return reversed    
+# def reverse_string (string):
+#     stack = []
+#     for char in string:
+#         stack.append(char)
+#     reversed = ""
+#     while stack:
+#         reversed += stack.pop()
+#     return reversed    
 
-print(reverse_string("Coolio"))
+# print(reverse_string("Coolio"))
+
+
+def evaluate_keystrokes(string):
+    i = len(string) - 1
+    result = ""
+    skip = 0
+    while i >= 0:
+        if string[i] == "<":
+            skip += 1
+            i -= 1
+        else:
+            if skip> 0:
+                i -= skip
+                skip = 0
+            else:
+                result = string[i] + result
+                i -= 1 
+    return result                   
+
+
+print(evaluate_keystrokes("abcd<<<fg<h"))
+
