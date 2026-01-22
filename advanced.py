@@ -15,7 +15,10 @@
 # arr = MyArray()
 # arr.push(6)
 # arr.push(612)
+# arr.push("6")
 # print(arr.length)          
+
+# print(hasattr(arr,"length"))
 
 # def first_repeated_value(list_):
 #     for i in range(0, len(list_)):
@@ -26,3 +29,51 @@
 
 
 # print(first_repeated_value([1,2,4,5,7,2]))
+
+# def first_repeated_value(list):
+#     number_set = set()
+#     for i in range(0, len(list)):
+#         if list[i] in number_set:
+#             return list[1]
+#         number_set.add(list[i])
+#     return None        
+
+
+# print(first_repeated_value([1,2,4,5,7,2]))   
+
+
+# class MySet:
+#     def __init__(self, enumerable=[]):
+#         self.dictionary = {}
+#         for value in enumerable:
+#             self.dictionary[value] = True
+#     def has(self, value):
+#         return value in self.dictionary[value]
+
+#     def add(self, value):
+#         self.dictionary[value] = True
+#         return self
+
+#     def delete(self, value):
+#         self.dictionary.pop(value, None)  
+#         return self
+#     def size(self):
+#         return len(self.dictionary)      
+    #   def clear(self):
+    #     self.dictionary.clear()
+            
+
+# print(len({"greeting":"Hello", "Name":"Collins"}))
+
+
+
+def reverse_string (string):
+    stack = []
+    for char in string:
+        stack.append(char)
+    reversed = ""
+    while stack:
+        reversed += stack.pop()
+    return reversed    
+
+print(reverse_string("Coolio"))
