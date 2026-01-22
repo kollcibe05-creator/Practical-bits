@@ -155,27 +155,91 @@
 
 
 ########Doubly linked list###################
-class DoublyLinkedList:
-    def __init__(self, head=None, tail=None):
-        self.head = head
-    def append(self, node):
-        if self.head ==None:
-            self.head = node
-            self.tail = node
-            return
-        node.prev = self.tail
-        self.tail.next_node = node
-        self.tail = node    
-    def delete_tail(self):
-        if self.head ==self.tail:
-            self.head = None
-            self.tail = None
-        else:
-            prev = self.tail.prev_node
+# class DoublyLinkedList:
+#     def __init__(self, head=None, tail=None):
+#         self.head = head
+#     def append(self, node):
+#         if self.head ==None:
+#             self.head = node
+#             self.tail = node
+#             return
+#         node.prev = self.tail
+    #     self.tail.next_node = node
+    #     self.tail = node    
+    # def delete_tail(self):
+    #     if self.head ==self.tail:
+    #         self.head = None
+    #         self.tail = None
+    #     else:
+    #         prev = self.tail.prev_node
 
-            prev.next_node = None
-            self.tail = prev    
+    #         prev.next_node = None
+    #         self.tail = prev    
+child_1 = {
+  'value': 2,
+  'children': []
+}
+
+child_2 = {
+  'value': 3,
+  'children': []
+}
+
+child_3 = {
+  'value': 4,
+  'children': []
+}
+
+root = {
+  'value': 1,
+  'children': [child_1, child_2, child_3]
+}
+
+
+
+def breadth_first_tree_traversal(node):
+    # initialize an empty output list
+    result = []
+    # Initialize a list of nodes to visit and add the root node to it
+    nodes_to_visit = [node]
+    # While there are nodes to visit in the nodes list
+    while len(nodes_to_visit):
+        # Remove the first node from the nodes to visit list
+        node = nodes_to_visit.pop(0)
+        # Add its value to the output list
+        result.append(node["value"])
+        # Add its children(if any ) to the end of the nodes to visit list
+        nodes_to_visit = nodes_to_visit + node["children"]
+    #Return the output list    
+    return result
+
+
+print(breadth_first_tree_traversal(root))
 
 
 
 
+
+def depth_first_tree_traversal(node):
+    # initialize an empty output list
+    result = []
+    # Initialize a list of nodes to visit and add the root node to it
+    nodes_to_visit = [node]
+    # While there are nodes to visit in the nodes list
+    while len(nodes_to_visit):
+        # Remove the first node from the nodes to visit list
+        node = nodes_to_visit.pop(0)
+        # Add its value to the output list
+        result.append(node["value"])
+        # Add its children(if any ) to the Beginning of the nodes to visit list
+        nodes_to_visit = node["children"]  +  nodes_to_visit
+    #Return the output list    
+    return result
+
+# def depth_first_tree_traversal(node, result=[]):
+#     result.append["value"]
+#     for child in node['children']:
+#         depth_first_tree_traversal(child, result)
+#     return result    
+
+print(depth_first_tree_traversal(root))    
