@@ -100,17 +100,82 @@
 # print(evaluate_keystrokes("abcd<<<fg<h"))
 
 
-def evaluate_keystrokes(string):
-    stack = []
-    for char in string:
-        if char =="<":
-            if len(stack) != 0:
-                stack.pop()
-        else:
-            stack.append(char)
-    result = ''
-    while stack:
-        result = stack.pop() + result
-    return result                    
+# def evaluate_keystrokes(string):
+#     stack = []
+#     for char in string:
+#         if char =="<":
+#             if len(stack) != 0:
+#                 stack.pop()
+#         else:
+#             stack.append(char)
+#     result = ''
+#     while stack:
+#         result = stack.pop() + result
+#     return result                    
 
-print(evaluate_keystrokes("abcd<<<fg<h"))
+# print(evaluate_keystrokes("abcd<<<fg<h"))
+
+# string = ["h", "e", "l", "l", "o"]
+
+# print(" ".join(string))
+
+
+# ##################Singly linked List #######################
+# class Node:
+#     def __init__(self, data, next_node=None):
+#         self.data = data
+#         self.next_node = next_node
+
+# class LinkedList:
+#     def __init__(self, head=None):
+#         self.head = head
+#     def append(self, node):
+#         if self.head == None:
+#             self.head = node
+#             return
+#         last_node = self.head
+#         while last_node.next_node:
+#             last_node = last_node.next_node
+#         last_node.next_node = node    
+
+
+
+# list_ = LinkedList()
+# list_.append(Node("Bulldog"))
+# list_.append(Node("Chihuahua"))
+# list_.append(Node("German Shepherd"))        
+
+# bulldog = Node("Bulldog")
+
+# chihuahua = Node("Chihuahua")                     
+# bulldog.next_node = chihuahua                 #inefficient ~ append() in LinkedList
+# german_shepherd = Node("German Shepherd")
+# chihuahua.next_node = german_shepherd
+
+
+
+########Doubly linked list###################
+class DoublyLinkedList:
+    def __init__(self, head=None, tail=None):
+        self.head = head
+    def append(self, node):
+        if self.head ==None:
+            self.head = node
+            self.tail = node
+            return
+        node.prev = self.tail
+        self.tail.next_node = node
+        self.tail = node    
+    def delete_tail(self):
+        if self.head ==self.tail:
+            self.head = None
+            self.tail = None
+        else:
+            prev = self.tail.prev_node
+
+            prev.next_node = None
+            self.tail = prev    
+
+
+
+
