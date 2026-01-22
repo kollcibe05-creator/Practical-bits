@@ -33,8 +33,22 @@
 //     }
 
 // }
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function(s) {
+    for (let i = 0; i<(s.length)/2; i++){
+        let j = s.length-1-i
+        if (s[i] == s[j]){
+            return true
+        }else{
+            return false
+        }
+    }
+};
 
-// console.log(isPalindrome("racecar"))
+console.log(isPalindrome("race"))
 
 
 // function fibonacci () {
