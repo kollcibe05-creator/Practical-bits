@@ -89,7 +89,7 @@
 // console.log(authenticated(allowedRoles, userRoles))
 
 
-const oneObj    = {id: 1, name: "Collo", age: 5}
+// const oneObj    = {id: 1, name: "Collo", age: 5}
 
 const oneArr = ["Two", "Little", "Ducks", "Swimming"]
 
@@ -103,17 +103,21 @@ const oneArr = ["Two", "Little", "Ducks", "Swimming"]
 // const {name, age:meme} = oneObj
 // console.log(name, meme)
 
-let arr =  [
-    {id: 1, name: "Collo", age: 5},
-    {id: 2, name: "Lucy", age: 6},
-    {id: 3, name: "Keziah", age: 7},
-    {id: 4, name: "Malik", age: 8},
-    {id: 5, name: "Rakim", age: 9},
-    {id: 6, name: "Noah", age: 10},
-    {id: 7, name: "Coolio", age: 11},
+// let arr =  [
+//     {id: 1, name: "Collo", age: 5},
+//     {id: 2, name: "Lucy", age: 6},
+//     {id: 3, name: "Keziah", age: 7},
+//     {id: 4, name: "Malik", age: 8},
+//     {id: 5, name: "Rakim", age: 9},
+//     {id: 6, name: "Noah", age: 10},
+//     {id: 7, name: "Coolio", age: 11},
 
-]
+// ]
 
 
-const {name} = arr[0];
-console.log(name)
+// const {name} = arr[0];
+// console.log(name)
+
+
+const oneObj    = {id: 1, name: "Collo", age: 5}
+if(oneObj?.name ==="Collo"){ console.log("Yes to me!")}else{ "Not me"}
