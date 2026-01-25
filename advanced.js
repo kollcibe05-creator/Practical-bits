@@ -119,5 +119,5 @@ const oneArr = ["Two", "Little", "Ducks", "Swimming"]
 // console.log(name)
 
 
-const oneObj    = {id: 1, name: "Collo", age: 5}
-if(oneObj?.name ==="Collo"){ console.log("Yes to me!")}else{ "Not me"}
+// const oneObj    = {id: 1, name: "Collo", age: 5}
+// if(oneObj?.name ==="Collo"){ console.log("Yes to me!")}else{ "Not me"}
