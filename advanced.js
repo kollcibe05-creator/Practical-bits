@@ -78,12 +78,42 @@
 // console.log(twoSum([1,4,6,9], 7))
 
 // console.log([1, 3, 5].includes(1))
-const allowedRoles = ["admin", "user", "guest"]
-const userRoles = ["admin", 'guest']
+// const allowedRoles = ["admin", "user", "guest"]
+// const userRoles = ["admin", 'guest']
 
-function authenticated(allowedRoles, userRoles) {
-    const hasPermission = Array.isArray(allowedRoles)? allowedRoles.includes(userRoles): allowedRoles === allowedRoles
-    return hasPermission 
-}
+// function authenticated(allowedRoles, userRoles) {
+//     const hasPermission = Array.isArray(allowedRoles)? allowedRoles.includes(userRoles): allowedRoles === allowedRoles
+//     return hasPermission 
+// }
 
-console.log(authenticated(allowedRoles, userRoles))
+// console.log(authenticated(allowedRoles, userRoles))
+
+
+const oneObj    = {id: 1, name: "Collo", age: 5}
+
+const oneArr = ["Two", "Little", "Ducks", "Swimming"]
+
+// const [one] = arr[0]
+
+// console.log(one)
+
+// const [name, house, things, activity] = oneArr
+
+// console.log(name)
+// const {name, age:meme} = oneObj
+// console.log(name, meme)
+
+let arr =  [
+    {id: 1, name: "Collo", age: 5},
+    {id: 2, name: "Lucy", age: 6},
+    {id: 3, name: "Keziah", age: 7},
+    {id: 4, name: "Malik", age: 8},
+    {id: 5, name: "Rakim", age: 9},
+    {id: 6, name: "Noah", age: 10},
+    {id: 7, name: "Coolio", age: 11},
+
+]
+
+
+const {name} = arr[0];
+console.log(name)
