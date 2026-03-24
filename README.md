@@ -1,4 +1,6 @@
-# Welcome to my test files!!
-
-You will probably get most of the code in jumbles but that's okay. It is a clear indication that I i have done extensive work to own the skill by coding and that I deserve to be where I am.
-It serves as a souvenir in my coding journey and my biggest dream is that I will one day revert to them and sigh citing "Yeah! We did it man"
+**Advanced.js**: optional chaining, palindrome, fibonnaci, twoSum(complement), obj&arr destructuring, *includes*, *Object.keys()* iteration  
+**index.js**: *includes*(with index), basic JS concepts(join, conditionals,,,,,)  
+**recall_refine.js**: capitalizeEachWord, arr methods(at, fill)  
+**ta.js**: Time edit, string Challenge(palindrome?)   
+**time.js**: review of ***ta.js**'s time, timeOut, Number()  
+**testing.js**(HOT): switch...case, iteration concepts(for..of, for...in, while), concat, Object.assign(), IIFE, TwoSum(isTargetSum)  
